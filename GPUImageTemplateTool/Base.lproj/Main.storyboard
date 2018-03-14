@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="394"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="380"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiA-ZP-Dm4">
-                                <rect key="frame" x="18" y="354" width="31" height="17"/>
+                                <rect key="frame" x="18" y="340" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="类名" id="MM6-02-a7q">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -720,7 +720,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cn9-65-Bvt">
-                                <rect key="frame" x="18" y="326" width="31" height="17"/>
+                                <rect key="frame" x="18" y="312" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="父类" id="mwj-No-ZGf">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -729,7 +729,7 @@
                                 </textFieldCell>
                             </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZQ-sO-uhC">
-                                <rect key="frame" x="63" y="320" width="200" height="26"/>
+                                <rect key="frame" x="63" y="306" width="200" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" title="GPUImageFilter" drawsBackground="YES" completes="NO" numberOfVisibleItems="4" id="Q0V-TN-ccm">
                                     <font key="font" metaFont="system"/>
@@ -744,7 +744,7 @@
                                 </comboBoxCell>
                             </comboBox>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-PD-ISf">
-                                <rect key="frame" x="63" y="352" width="197" height="22"/>
+                                <rect key="frame" x="63" y="338" width="197" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="u89-FA-Zji">
                                     <font key="font" metaFont="system"/>
@@ -753,7 +753,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IpP-6a-8ya">
-                                <rect key="frame" x="18" y="297" width="31" height="17"/>
+                                <rect key="frame" x="18" y="283" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="纹理" id="KZu-e8-5f5">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -762,7 +762,7 @@
                                 </textFieldCell>
                             </textField>
                             <pathControl hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="asw-rS-XIY">
-                                <rect key="frame" x="63" y="294" width="176" height="22"/>
+                                <rect key="frame" x="63" y="280" width="176" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="JYN-ex-gOj">
                                     <font key="font" metaFont="system"/>
@@ -771,7 +771,7 @@
                                 </pathCell>
                             </pathControl>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zHR-bP-Cd2">
-                                <rect key="frame" x="18" y="235" width="31" height="17"/>
+                                <rect key="frame" x="18" y="221" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="纹理" id="JdD-w6-sYP">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -780,7 +780,7 @@
                                 </textFieldCell>
                             </textField>
                             <pathControl hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndf-m8-AaN">
-                                <rect key="frame" x="63" y="233" width="176" height="22"/>
+                                <rect key="frame" x="63" y="219" width="176" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="GMb-hV-TqG">
                                     <font key="font" metaFont="system"/>
@@ -789,7 +789,7 @@
                                 </pathCell>
                             </pathControl>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="9WO-fW-UMc">
-                                <rect key="frame" x="63" y="230" width="68" height="25"/>
+                                <rect key="frame" x="63" y="216" width="68" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="选择文件" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="93S-lI-lcG">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -800,7 +800,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcq-H5-UVX">
-                                <rect key="frame" x="242" y="297" width="11" height="17"/>
+                                <rect key="frame" x="242" y="283" width="11" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="X" id="NSV-2O-N5v">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -809,7 +809,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MS3-vJ-6hy">
-                                <rect key="frame" x="241" y="235" width="13" height="17"/>
+                                <rect key="frame" x="241" y="221" width="13" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="X" id="5xc-Sn-GSn">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -818,7 +818,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FZ8-gL-b46">
-                                <rect key="frame" x="257" y="232" width="45" height="22"/>
+                                <rect key="frame" x="257" y="218" width="45" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="X坐标" drawsBackground="YES" id="fcX-I2-hbs">
                                     <font key="font" metaFont="system"/>
@@ -827,7 +827,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwo-kR-8JW">
-                                <rect key="frame" x="18" y="267" width="31" height="17"/>
+                                <rect key="frame" x="18" y="253" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="时长" id="gjw-L5-gaC">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -836,7 +836,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-Xl-rnT">
-                                <rect key="frame" x="63" y="265" width="96" height="22"/>
+                                <rect key="frame" x="63" y="251" width="96" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="显示时长(3s)" drawsBackground="YES" id="Bfj-ac-7cF">
                                     <font key="font" metaFont="system"/>
@@ -845,7 +845,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sUh-Me-ro6">
-                                <rect key="frame" x="206" y="268" width="31" height="17"/>
+                                <rect key="frame" x="206" y="254" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="开始" id="dWe-Vd-IrN">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -854,7 +854,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pl3-lh-1FY">
-                                <rect key="frame" x="362" y="268" width="31" height="17"/>
+                                <rect key="frame" x="362" y="254" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="结束" id="O6J-Pq-OTH">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -863,7 +863,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-mc-P43">
-                                <rect key="frame" x="240" y="265" width="62" height="22"/>
+                                <rect key="frame" x="240" y="251" width="62" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="开始(0s)" drawsBackground="YES" id="L7S-e0-ZGW">
                                     <font key="font" metaFont="system"/>
@@ -872,7 +872,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKH-gS-vgn">
-                                <rect key="frame" x="18" y="206" width="31" height="17"/>
+                                <rect key="frame" x="18" y="192" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="时长" id="qMh-nY-Mo1">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -881,7 +881,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pns-sA-9ub">
-                                <rect key="frame" x="63" y="204" width="96" height="22"/>
+                                <rect key="frame" x="63" y="190" width="96" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="显示时长(3s)" drawsBackground="YES" id="EWc-ic-kZ3">
                                     <font key="font" metaFont="system"/>
@@ -890,7 +890,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-Bq-EQ3">
-                                <rect key="frame" x="206" y="206" width="31" height="17"/>
+                                <rect key="frame" x="206" y="192" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="开始" id="iA8-oE-Hqj">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -899,7 +899,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03F-N3-Paa">
-                                <rect key="frame" x="362" y="206" width="31" height="17"/>
+                                <rect key="frame" x="362" y="192" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="结束" id="nxl-0P-enN">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -908,7 +908,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8g-AP-Wu0">
-                                <rect key="frame" x="397" y="265" width="62" height="22"/>
+                                <rect key="frame" x="397" y="251" width="62" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="结束(3s)" drawsBackground="YES" id="Dhx-0W-dAc">
                                     <font key="font" metaFont="system"/>
@@ -917,7 +917,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOK-Yk-sPk">
-                                <rect key="frame" x="239" y="203" width="62" height="22"/>
+                                <rect key="frame" x="239" y="189" width="62" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="开始(0s)" drawsBackground="YES" id="pgf-9N-uJc">
                                     <font key="font" metaFont="system"/>
@@ -926,7 +926,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9B-jn-PLx">
-                                <rect key="frame" x="397" y="203" width="62" height="22"/>
+                                <rect key="frame" x="397" y="189" width="62" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="结束(3s)" drawsBackground="YES" id="qeA-b3-cX9">
                                     <font key="font" metaFont="system"/>
@@ -935,7 +935,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-UC-KIA">
-                                <rect key="frame" x="63" y="292" width="68" height="25"/>
+                                <rect key="frame" x="63" y="278" width="68" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="选择文件" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" tag="1" imageScaling="proportionallyDown" inset="2" id="Dno-FN-hNx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -946,7 +946,7 @@
                                 </connections>
                             </button>
                             <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bV7-fr-cUI">
-                                <rect key="frame" x="306" y="319" width="153" height="29"/>
+                                <rect key="frame" x="306" y="305" width="153" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4y-oi-nHW">
@@ -988,7 +988,7 @@
                                 </subviews>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P6q-Da-BuY">
-                                <rect key="frame" x="315" y="297" width="13" height="17"/>
+                                <rect key="frame" x="315" y="283" width="13" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Y" id="KOd-4A-5X2">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -997,7 +997,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-f5-tEK">
-                                <rect key="frame" x="332" y="294" width="45" height="22"/>
+                                <rect key="frame" x="332" y="280" width="45" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Y坐标" drawsBackground="YES" id="MT2-QL-kwO">
                                     <font key="font" metaFont="system"/>
@@ -1006,7 +1006,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-eZ-ulI">
-                                <rect key="frame" x="389" y="297" width="31" height="17"/>
+                                <rect key="frame" x="389" y="283" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="层级" id="cUi-2I-LyA">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1015,7 +1015,7 @@
                                 </textFieldCell>
                             </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="2YA-iI-gHB">
-                                <rect key="frame" x="425" y="291" width="37" height="26"/>
+                                <rect key="frame" x="425" y="277" width="37" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="1" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="WDu-Gu-qr3">
                                     <font key="font" metaFont="system"/>
@@ -1035,7 +1035,7 @@
                                 </comboBoxCell>
                             </comboBox>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-HS-DUI">
-                                <rect key="frame" x="257" y="294" width="45" height="22"/>
+                                <rect key="frame" x="257" y="280" width="45" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="X坐标" drawsBackground="YES" id="tZS-24-Y8F">
                                     <font key="font" metaFont="system"/>
@@ -1044,7 +1044,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18p-8F-NNM">
-                                <rect key="frame" x="331" y="232" width="45" height="22"/>
+                                <rect key="frame" x="331" y="218" width="45" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="X坐标" drawsBackground="YES" id="qF9-vf-red">
                                     <font key="font" metaFont="system"/>
@@ -1053,7 +1053,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9E-BL-S5a">
-                                <rect key="frame" x="389" y="236" width="31" height="17"/>
+                                <rect key="frame" x="389" y="222" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="层级" id="g0M-Rb-mw5">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1062,7 +1062,7 @@
                                 </textFieldCell>
                             </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="3RP-RV-zCc">
-                                <rect key="frame" x="425" y="229" width="37" height="26"/>
+                                <rect key="frame" x="425" y="215" width="37" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="1" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="fsh-3J-cK3">
                                     <font key="font" metaFont="system"/>
@@ -1082,7 +1082,7 @@
                                 </comboBoxCell>
                             </comboBox>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOW-HL-KRE">
-                                <rect key="frame" x="19" y="176" width="31" height="17"/>
+                                <rect key="frame" x="19" y="162" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="纹理" id="aw2-FD-rru">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1091,7 +1091,7 @@
                                 </textFieldCell>
                             </textField>
                             <pathControl hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ah-Sq-QQ2">
-                                <rect key="frame" x="64" y="174" width="176" height="22"/>
+                                <rect key="frame" x="64" y="160" width="176" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="cYN-rR-z7v">
                                     <font key="font" metaFont="system"/>
@@ -1100,7 +1100,7 @@
                                 </pathCell>
                             </pathControl>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="bnQ-7O-bre">
-                                <rect key="frame" x="64" y="171" width="68" height="25"/>
+                                <rect key="frame" x="64" y="157" width="68" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="选择文件" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="2zw-oj-8mx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1111,7 +1111,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFg-Ds-m5l">
-                                <rect key="frame" x="242" y="176" width="13" height="17"/>
+                                <rect key="frame" x="242" y="162" width="13" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="X" id="9Pq-Na-jOT">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1120,7 +1120,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lvs-Ho-0YM">
-                                <rect key="frame" x="258" y="173" width="45" height="22"/>
+                                <rect key="frame" x="258" y="159" width="45" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="X坐标" drawsBackground="YES" id="KtR-L6-Otu">
                                     <font key="font" metaFont="system"/>
@@ -1129,7 +1129,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xY7-r0-IXa">
-                                <rect key="frame" x="19" y="147" width="31" height="17"/>
+                                <rect key="frame" x="19" y="133" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="时长" id="TcF-P4-5LT">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1138,7 +1138,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csO-0U-XOQ">
-                                <rect key="frame" x="64" y="145" width="96" height="22"/>
+                                <rect key="frame" x="64" y="131" width="96" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="显示时长(3s)" drawsBackground="YES" id="HDS-LG-5ul">
                                     <font key="font" metaFont="system"/>
@@ -1147,7 +1147,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrt-BZ-S9W">
-                                <rect key="frame" x="207" y="147" width="31" height="17"/>
+                                <rect key="frame" x="207" y="133" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="开始" id="xwX-gF-ib4">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1156,7 +1156,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yJN-0p-LJm">
-                                <rect key="frame" x="363" y="147" width="31" height="17"/>
+                                <rect key="frame" x="363" y="133" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="结束" id="SRo-ol-tjj">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1165,7 +1165,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hf-XJ-FQD">
-                                <rect key="frame" x="240" y="144" width="62" height="22"/>
+                                <rect key="frame" x="240" y="130" width="62" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="开始(0s)" drawsBackground="YES" id="zpB-cw-dzc">
                                     <font key="font" metaFont="system"/>
@@ -1174,7 +1174,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXX-RI-nmZ">
-                                <rect key="frame" x="398" y="144" width="62" height="22"/>
+                                <rect key="frame" x="398" y="130" width="62" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="结束(3s)" drawsBackground="YES" id="YZV-Lb-kOd">
                                     <font key="font" metaFont="system"/>
@@ -1183,7 +1183,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-AQ-n0j">
-                                <rect key="frame" x="316" y="176" width="13" height="17"/>
+                                <rect key="frame" x="316" y="162" width="13" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Y" id="vaH-RQ-cKY">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1192,7 +1192,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOY-lL-iyc">
-                                <rect key="frame" x="332" y="173" width="45" height="22"/>
+                                <rect key="frame" x="332" y="159" width="45" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="X坐标" drawsBackground="YES" id="WXn-wD-nnv">
                                     <font key="font" metaFont="system"/>
@@ -1201,7 +1201,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdX-EH-o7O">
-                                <rect key="frame" x="390" y="177" width="31" height="17"/>
+                                <rect key="frame" x="390" y="163" width="31" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="层级" id="8ut-ax-iFQ">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1210,7 +1210,7 @@
                                 </textFieldCell>
                             </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="OET-1H-89f">
-                                <rect key="frame" x="426" y="170" width="37" height="26"/>
+                                <rect key="frame" x="426" y="156" width="37" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="1" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="VEJ-UG-h2H">
                                     <font key="font" metaFont="system"/>
@@ -1230,7 +1230,7 @@
                                 </comboBoxCell>
                             </comboBox>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYz-2t-mvO">
-                                <rect key="frame" x="315" y="235" width="13" height="17"/>
+                                <rect key="frame" x="315" y="221" width="13" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Y" id="KCk-ht-CGE">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1239,7 +1239,7 @@
                                 </textFieldCell>
                             </textField>
                             <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfH-WZ-1ih">
-                                <rect key="frame" x="20" y="39" width="440" height="97"/>
+                                <rect key="frame" x="20" y="32" width="440" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-8h-Mgm">
@@ -1439,7 +1439,7 @@
                                 </subviews>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5PB-26-tpr">
-                                <rect key="frame" x="412" y="353" width="49" height="18"/>
+                                <rect key="frame" x="412" y="339" width="49" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="视频" bezelStyle="regularSquare" imagePosition="left" inset="2" id="YFb-70-DeB">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1450,7 +1450,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6n-ex-deR">
-                                <rect key="frame" x="267" y="354" width="62" height="18"/>
+                                <rect key="frame" x="267" y="340" width="62" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="归一化" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Iu5-G4-m6D">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1461,7 +1461,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tca-97-SgH">
-                                <rect key="frame" x="176" y="6" width="128" height="25"/>
+                                <rect key="frame" x="176" y="2" width="128" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="一  键  生  成" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lSF-gY-cnn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1472,15 +1472,12 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wjK-hB-wIr">
-                                <rect key="frame" x="340" y="354" width="66" height="18"/>
+                                <rect key="frame" x="340" y="340" width="66" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Shader" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="xzo-C2-yPw">
+                                <buttonCell key="cell" type="check" title="Shader" bezelStyle="regularSquare" imagePosition="left" inset="2" id="xzo-C2-yPw">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="normalizedValueChanged:" target="XfG-lQ-9wD" id="UdF-ok-3gQ"/>
-                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -1509,7 +1506,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="717"/>
+            <point key="canvasLocation" x="75" y="710"/>
         </scene>
     </scenes>
 </document>
