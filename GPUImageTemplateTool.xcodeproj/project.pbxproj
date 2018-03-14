@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		545B2B3F2058C5A3000D3F51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B3E2058C5A3000D3F51 /* AppDelegate.m */; };
+		545B2B422058C5A3000D3F51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B412058C5A3000D3F51 /* ViewController.m */; };
+		545B2B442058C5A3000D3F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B432058C5A3000D3F51 /* Assets.xcassets */; };
+		545B2B472058C5A3000D3F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B452058C5A3000D3F51 /* Main.storyboard */; };
+		545B2B4A2058C5A3000D3F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B492058C5A3000D3F51 /* main.m */; };
+		545B2B562058C6F8000D3F51 /* GPUImageFilterTemplater_h.txt in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B522058C6F7000D3F51 /* GPUImageFilterTemplater_h.txt */; };
+		545B2B572058C6F8000D3F51 /* GPUImageFilterGroupTemplater_m.txt in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B532058C6F7000D3F51 /* GPUImageFilterGroupTemplater_m.txt */; };
+		545B2B582058C6F8000D3F51 /* GPUImageFilterGroupTemplater_h.txt in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B542058C6F7000D3F51 /* GPUImageFilterGroupTemplater_h.txt */; };
+		545B2B592058C6F8000D3F51 /* GPUImageFilterTemplater_m.txt in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B552058C6F7000D3F51 /* GPUImageFilterTemplater_m.txt */; };
+		545B2B6A2058CA9C000D3F51 /* ICUTemplateMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B5D2058CA9C000D3F51 /* ICUTemplateMatcher.m */; };
+		545B2B6B2058CA9C000D3F51 /* MGTemplateEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B5F2058CA9C000D3F51 /* MGTemplateEngine.m */; };
+		545B2B6C2058CA9C000D3F51 /* MGTemplateStandardFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B632058CA9C000D3F51 /* MGTemplateStandardFilters.m */; };
+		545B2B6D2058CA9C000D3F51 /* MGTemplateStandardMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B652058CA9C000D3F51 /* MGTemplateStandardMarkers.m */; };
+		545B2B6E2058CA9C000D3F51 /* NSArray_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B672058CA9C000D3F51 /* NSArray_DeepMutableCopy.m */; };
+		545B2B6F2058CA9C000D3F51 /* NSDictionary_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B692058CA9C000D3F51 /* NSDictionary_DeepMutableCopy.m */; };
+		545B2B742058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_h.txt in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B702058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_h.txt */; };
+		545B2B752058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_m.txt in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B712058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_m.txt */; };
+		545B2B762058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_m.txt in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B722058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_m.txt */; };
+		545B2B772058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_h.txt in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B732058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_h.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		545B2B3A2058C5A3000D3F51 /* GPUImageTemplateTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImageTemplateTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		545B2B3D2058C5A3000D3F51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		545B2B3E2058C5A3000D3F51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		545B2B402058C5A3000D3F51 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		545B2B412058C5A3000D3F51 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		545B2B432058C5A3000D3F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		545B2B462058C5A3000D3F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		545B2B482058C5A3000D3F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		545B2B492058C5A3000D3F51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		545B2B4B2058C5A3000D3F51 /* GPUImageTemplateTool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GPUImageTemplateTool.entitlements; sourceTree = "<group>"; };
+		545B2B522058C6F7000D3F51 /* GPUImageFilterTemplater_h.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPUImageFilterTemplater_h.txt; sourceTree = "<group>"; };
+		545B2B532058C6F7000D3F51 /* GPUImageFilterGroupTemplater_m.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPUImageFilterGroupTemplater_m.txt; sourceTree = "<group>"; };
+		545B2B542058C6F7000D3F51 /* GPUImageFilterGroupTemplater_h.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPUImageFilterGroupTemplater_h.txt; sourceTree = "<group>"; };
+		545B2B552058C6F7000D3F51 /* GPUImageFilterTemplater_m.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPUImageFilterTemplater_m.txt; sourceTree = "<group>"; };
+		545B2B5B2058CA9C000D3F51 /* DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeepMutableCopy.h; sourceTree = "<group>"; };
+		545B2B5C2058CA9C000D3F51 /* ICUTemplateMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUTemplateMatcher.h; sourceTree = "<group>"; };
+		545B2B5D2058CA9C000D3F51 /* ICUTemplateMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUTemplateMatcher.m; sourceTree = "<group>"; };
+		545B2B5E2058CA9C000D3F51 /* MGTemplateEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateEngine.h; sourceTree = "<group>"; };
+		545B2B5F2058CA9C000D3F51 /* MGTemplateEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateEngine.m; sourceTree = "<group>"; };
+		545B2B602058CA9C000D3F51 /* MGTemplateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateFilter.h; sourceTree = "<group>"; };
+		545B2B612058CA9C000D3F51 /* MGTemplateMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateMarker.h; sourceTree = "<group>"; };
+		545B2B622058CA9C000D3F51 /* MGTemplateStandardFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateStandardFilters.h; sourceTree = "<group>"; };
+		545B2B632058CA9C000D3F51 /* MGTemplateStandardFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateStandardFilters.m; sourceTree = "<group>"; };
+		545B2B642058CA9C000D3F51 /* MGTemplateStandardMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateStandardMarkers.h; sourceTree = "<group>"; };
+		545B2B652058CA9C000D3F51 /* MGTemplateStandardMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateStandardMarkers.m; sourceTree = "<group>"; };
+		545B2B662058CA9C000D3F51 /* NSArray_DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_DeepMutableCopy.h; sourceTree = "<group>"; };
+		545B2B672058CA9C000D3F51 /* NSArray_DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_DeepMutableCopy.m; sourceTree = "<group>"; };
+		545B2B682058CA9C000D3F51 /* NSDictionary_DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_DeepMutableCopy.h; sourceTree = "<group>"; };
+		545B2B692058CA9C000D3F51 /* NSDictionary_DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_DeepMutableCopy.m; sourceTree = "<group>"; };
+		545B2B702058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_h.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPUImageThreeInputFilterTemplater_h.txt; sourceTree = "<group>"; };
+		545B2B712058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_m.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPUImageThreeInputFilterTemplater_m.txt; sourceTree = "<group>"; };
+		545B2B722058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_m.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPUImageTwoInputFilterTemplater_m.txt; sourceTree = "<group>"; };
+		545B2B732058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_h.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPUImageTwoInputFilterTemplater_h.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		545B2B372058C5A3000D3F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		545B2B312058C5A3000D3F51 = {
+			isa = PBXGroup;
+			children = (
+				545B2B3C2058C5A3000D3F51 /* GPUImageTemplateTool */,
+				545B2B3B2058C5A3000D3F51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		545B2B3B2058C5A3000D3F51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				545B2B3A2058C5A3000D3F51 /* GPUImageTemplateTool.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		545B2B3C2058C5A3000D3F51 /* GPUImageTemplateTool */ = {
+			isa = PBXGroup;
+			children = (
+				545B2B5A2058CA9C000D3F51 /* MGTemplateEngine */,
+				545B2B512058C6C8000D3F51 /* GPUImageTemplate */,
+				545B2B3D2058C5A3000D3F51 /* AppDelegate.h */,
+				545B2B3E2058C5A3000D3F51 /* AppDelegate.m */,
+				545B2B402058C5A3000D3F51 /* ViewController.h */,
+				545B2B412058C5A3000D3F51 /* ViewController.m */,
+				545B2B432058C5A3000D3F51 /* Assets.xcassets */,
+				545B2B452058C5A3000D3F51 /* Main.storyboard */,
+				545B2B482058C5A3000D3F51 /* Info.plist */,
+				545B2B492058C5A3000D3F51 /* main.m */,
+				545B2B4B2058C5A3000D3F51 /* GPUImageTemplateTool.entitlements */,
+			);
+			path = GPUImageTemplateTool;
+			sourceTree = "<group>";
+		};
+		545B2B512058C6C8000D3F51 /* GPUImageTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				545B2B702058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_h.txt */,
+				545B2B712058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_m.txt */,
+				545B2B732058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_h.txt */,
+				545B2B722058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_m.txt */,
+				545B2B542058C6F7000D3F51 /* GPUImageFilterGroupTemplater_h.txt */,
+				545B2B532058C6F7000D3F51 /* GPUImageFilterGroupTemplater_m.txt */,
+				545B2B522058C6F7000D3F51 /* GPUImageFilterTemplater_h.txt */,
+				545B2B552058C6F7000D3F51 /* GPUImageFilterTemplater_m.txt */,
+			);
+			path = GPUImageTemplate;
+			sourceTree = "<group>";
+		};
+		545B2B5A2058CA9C000D3F51 /* MGTemplateEngine */ = {
+			isa = PBXGroup;
+			children = (
+				545B2B5B2058CA9C000D3F51 /* DeepMutableCopy.h */,
+				545B2B5C2058CA9C000D3F51 /* ICUTemplateMatcher.h */,
+				545B2B5D2058CA9C000D3F51 /* ICUTemplateMatcher.m */,
+				545B2B5E2058CA9C000D3F51 /* MGTemplateEngine.h */,
+				545B2B5F2058CA9C000D3F51 /* MGTemplateEngine.m */,
+				545B2B602058CA9C000D3F51 /* MGTemplateFilter.h */,
+				545B2B612058CA9C000D3F51 /* MGTemplateMarker.h */,
+				545B2B622058CA9C000D3F51 /* MGTemplateStandardFilters.h */,
+				545B2B632058CA9C000D3F51 /* MGTemplateStandardFilters.m */,
+				545B2B642058CA9C000D3F51 /* MGTemplateStandardMarkers.h */,
+				545B2B652058CA9C000D3F51 /* MGTemplateStandardMarkers.m */,
+				545B2B662058CA9C000D3F51 /* NSArray_DeepMutableCopy.h */,
+				545B2B672058CA9C000D3F51 /* NSArray_DeepMutableCopy.m */,
+				545B2B682058CA9C000D3F51 /* NSDictionary_DeepMutableCopy.h */,
+				545B2B692058CA9C000D3F51 /* NSDictionary_DeepMutableCopy.m */,
+			);
+			path = MGTemplateEngine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		545B2B392058C5A3000D3F51 /* GPUImageTemplateTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 545B2B4E2058C5A3000D3F51 /* Build configuration list for PBXNativeTarget "GPUImageTemplateTool" */;
+			buildPhases = (
+				545B2B362058C5A3000D3F51 /* Sources */,
+				545B2B372058C5A3000D3F51 /* Frameworks */,
+				545B2B382058C5A3000D3F51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPUImageTemplateTool;
+			productName = GPUImageTemplateTool;
+			productReference = 545B2B3A2058C5A3000D3F51 /* GPUImageTemplateTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		545B2B322058C5A3000D3F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Godlike Studio";
+				TargetAttributes = {
+					545B2B392058C5A3000D3F51 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 545B2B352058C5A3000D3F51 /* Build configuration list for PBXProject "GPUImageTemplateTool" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 545B2B312058C5A3000D3F51;
+			productRefGroup = 545B2B3B2058C5A3000D3F51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				545B2B392058C5A3000D3F51 /* GPUImageTemplateTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		545B2B382058C5A3000D3F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545B2B762058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_m.txt in Resources */,
+				545B2B742058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_h.txt in Resources */,
+				545B2B572058C6F8000D3F51 /* GPUImageFilterGroupTemplater_m.txt in Resources */,
+				545B2B442058C5A3000D3F51 /* Assets.xcassets in Resources */,
+				545B2B592058C6F8000D3F51 /* GPUImageFilterTemplater_m.txt in Resources */,
+				545B2B772058EEC4000D3F51 /* GPUImageTwoInputFilterTemplater_h.txt in Resources */,
+				545B2B752058EEC4000D3F51 /* GPUImageThreeInputFilterTemplater_m.txt in Resources */,
+				545B2B472058C5A3000D3F51 /* Main.storyboard in Resources */,
+				545B2B582058C6F8000D3F51 /* GPUImageFilterGroupTemplater_h.txt in Resources */,
+				545B2B562058C6F8000D3F51 /* GPUImageFilterTemplater_h.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		545B2B362058C5A3000D3F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545B2B6F2058CA9C000D3F51 /* NSDictionary_DeepMutableCopy.m in Sources */,
+				545B2B6A2058CA9C000D3F51 /* ICUTemplateMatcher.m in Sources */,
+				545B2B422058C5A3000D3F51 /* ViewController.m in Sources */,
+				545B2B6C2058CA9C000D3F51 /* MGTemplateStandardFilters.m in Sources */,
+				545B2B4A2058C5A3000D3F51 /* main.m in Sources */,
+				545B2B6B2058CA9C000D3F51 /* MGTemplateEngine.m in Sources */,
+				545B2B6D2058CA9C000D3F51 /* MGTemplateStandardMarkers.m in Sources */,
+				545B2B6E2058CA9C000D3F51 /* NSArray_DeepMutableCopy.m in Sources */,
+				545B2B3F2058C5A3000D3F51 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		545B2B452058C5A3000D3F51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				545B2B462058C5A3000D3F51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		545B2B4C2058C5A3000D3F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		545B2B4D2058C5A3000D3F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		545B2B4F2058C5A3000D3F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GPUImageTemplateTool/GPUImageTemplateTool.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LQW337MH2W;
+				INFOPLIST_FILE = GPUImageTemplateTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.godlike.GPUImageTemplateTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		545B2B502058C5A3000D3F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GPUImageTemplateTool/GPUImageTemplateTool.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LQW337MH2W;
+				INFOPLIST_FILE = GPUImageTemplateTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.godlike.GPUImageTemplateTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		545B2B352058C5A3000D3F51 /* Build configuration list for PBXProject "GPUImageTemplateTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545B2B4C2058C5A3000D3F51 /* Debug */,
+				545B2B4D2058C5A3000D3F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		545B2B4E2058C5A3000D3F51 /* Build configuration list for PBXNativeTarget "GPUImageTemplateTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545B2B4F2058C5A3000D3F51 /* Debug */,
+				545B2B502058C5A3000D3F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 545B2B322058C5A3000D3F51 /* Project object */;
+}
