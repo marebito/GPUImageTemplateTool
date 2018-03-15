@@ -1,5 +1,5 @@
 //
-//  {{ ClassName }}.h
+//  GPUImage{{ ClassName }}Filter.h
 //  GPUImageFilterCodeGenerateTool
 //
 //  Created by zll on 2018/3/14.
@@ -9,7 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <GPUImage/GPUImageFilter.h>
 
-@interface {{ ClassName }} : {{ SuperClassName }}
+{% if PicTimeProcessed %}
+@interface GPUImagePicture (ProcessTime)
+
+/**
+处理图片效果时加 time 参数
+
+@param time 时间
+*/
+- (void)processImage:(CMTime)time;
+
+@end
+{% /if %}
+
+@interface GPUImage{{ ClassName }}Filter : {{ SuperClassName }}
 
 - (id)init{% for p in Param %}With{{ p.key | capitalized }}:({{ p.value }} *){{ p.key }} {% /for %};
 

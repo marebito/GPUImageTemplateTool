@@ -27,6 +27,7 @@
 @property (weak) IBOutlet NSButton *tex2SelBtn;
 @property (weak) IBOutlet NSButton *tex3SelBtn;
 @property (weak) IBOutlet NSButton *videoSelBtn;
+@property (weak) IBOutlet NSButton *shaderSelBtn;
 @property (weak) IBOutlet NSPathControl *tex1PC;
 @property (weak) IBOutlet NSPathControl *tex2PC;
 @property (weak) IBOutlet NSPathControl *tex3PC;
@@ -54,8 +55,8 @@
     [super viewDidLoad];
 }
 
-
-- (void)setRepresentedObject:(id)representedObject {
+- (void)setRepresentedObject:(id)representedObject
+{
     [super setRepresentedObject:representedObject];
 }
 
@@ -128,7 +129,7 @@
     NSMutableArray *mArr = [NSMutableArray new];
     if ([_classNameTF.stringValue isEqualToString:@""])
     {
-        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_classNameTF.stringValue, @"key", @"NSString", @"value", nil];
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_classNameTF.stringValue, @"attr", @"GPUImagePicture", @"type", nil];
         [mArr addObject:dic];
     }
     /*
@@ -161,6 +162,7 @@
     // Set up some variables for this specific template.
     NSDictionary *variables = [NSDictionary dictionaryWithObjectsAndKeys:
                                mArr, @"Param",
+                               (_shaderSelBtn.state == NSControlStateValueOn), @"ShaderEnabled",
                                _classNameTF.stringValue, @"ClassName",
                                //                               _urlTF.stringValue, @"Url",
                                _superClassCB.stringValue, @"SuperClassName",
@@ -173,10 +175,22 @@
     //    NSLog(@"Processed template:\r%@", result);
 
     NSString *bundle = [[NSBundle mainBundle] resourcePath];
-    NSString *deskTopLocation = [[bundle substringToIndex:[bundle rangeOfString:@"Library"].location] stringByAppendingFormat:@"Desktop"];
+    NSString *filtersLocation = [[bundle substringToIndex:[bundle rangeOfString:@"Library"].location] stringByAppendingPathComponent:@"Desktop/GenerateFilters"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filtersLocation])
+    {
+        NSError * error = nil;
+        BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:filtersLocation
+                                                 withIntermediateDirectories:YES
+                                                                  attributes:nil
+                                                                       error:&error];
+        if (!success || error) {
+            NSLog(@"[创建文件夹失败]! %@", error);
+            return;
+        }
+    }
     NSString *filterTypeName = [self filterTypeName];
-    NSString *pathH = [deskTopLocation stringByAppendingPathComponent:[NSString stringWithFormat:@"GPUImage%@%@.h", _classNameTF.stringValue, filterTypeName]];
-    NSString *pathM = [deskTopLocation stringByAppendingPathComponent:[NSString stringWithFormat:@"GPUImage%@%@.m", _classNameTF.stringValue,filterTypeName]];
+    NSString *pathH = [filtersLocation stringByAppendingPathComponent:[NSString stringWithFormat:@"GPUImage%@%@.h", _classNameTF.stringValue, filterTypeName]];
+    NSString *pathM = [filtersLocation stringByAppendingPathComponent:[NSString stringWithFormat:@"GPUImage%@%@.m", _classNameTF.stringValue,filterTypeName]];
     NSError *errorH;
     NSError *errorM;
     BOOL isSuccessH = [resultH writeToFile:pathH atomically:YES encoding:NSUTF8StringEncoding error:&errorH];
@@ -254,12 +268,29 @@
     self.canvasView.hidden = (((NSButton *)sender).state == NSControlStateValueOn);
 }
 
+- (void)updateWindowSize
+{
+    NSRect windowFrame = [self.view.window frame];
+    // 加上SubView高度和宽度的变化值
+    windowFrame.size.height += 20.0;
+    windowFrame.size.width += 0.0;
+    // 为了保持窗口左上角位置不变，需要重设窗口框的绘制起点的y值
+    // 之所以用 -= 是因为Cocoa的绘图起点是左下角
+    // 起点的x值无需改变。
+    windowFrame.origin.y -= 20.0;
+    // 改变窗口大小，使用动画
+    [self.view.window setFrame:windowFrame display:YES animate:YES];
+}
+
 - (IBAction)videoChecked:(id)sender
 {
+    //    [self updateWindowSize];
     self.videoSettingView.hidden = (((NSButton *)sender).state == NSControlStateValueOff);
 }
 
-- (void)updatePathControl:(NSPathControl *)pathCtl andSelectBtn:(NSButton *)btn filePath:(NSString *)filePath
+- (void)updatePathControl:(NSPathControl *)pathCtl
+                selectBtn:(NSButton *)btn
+                 filePath:(NSString *)filePath
 {
     btn.hidden = YES;
     pathCtl.hidden = NO;
@@ -273,12 +304,13 @@
         @StrongObj(self);
         if (response == NSModalResponseOK)
         {
-            [self updatePathControl:self.mp4PC andSelectBtn:self.videoSelBtn filePath:filePath];
+            [self updatePathControl:self.mp4PC selectBtn:self.videoSelBtn filePath:filePath];
         }
     } isPresent:NO];
 }
 
-- (IBAction)selectTexture:(id)sender {
+- (IBAction)selectTexture:(id)sender
+{
     @WeakObj(self);
     [self selectFile:^(NSInteger response, NSString *filePath) {
         @StrongObj(self);
@@ -287,17 +319,17 @@
             switch (((NSButton *)sender).tag) {
                 case 1:
                 {
-                    [self updatePathControl:self.tex1PC andSelectBtn:self.tex1SelBtn filePath:filePath];
+                    [self updatePathControl:self.tex1PC selectBtn:self.tex1SelBtn filePath:filePath];
                 }
                     break;
                 case 2:
                 {
-                    [self updatePathControl:self.tex2PC andSelectBtn:self.tex2SelBtn filePath:filePath];
+                    [self updatePathControl:self.tex2PC selectBtn:self.tex2SelBtn filePath:filePath];
                 }
                     break;
                 case 3:
                 {
-                    [self updatePathControl:self.tex3PC andSelectBtn:self.tex3SelBtn filePath:filePath];
+                    [self updatePathControl:self.tex3PC selectBtn:self.tex3SelBtn filePath:filePath];
                 }
                     break;
                 default:
