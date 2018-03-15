@@ -133,9 +133,19 @@
     templatePath_m = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@Templater_m", _superClassCB.stringValue] ofType:@"txt"];
 
     NSMutableArray *mArr = [NSMutableArray new];
-    if ([_classNameTF.stringValue isEqualToString:@""])
+    if (![_tex1NameTF.stringValue isEqualToString:@""])
     {
-        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_classNameTF.stringValue, @"attr", @"GPUImagePicture", @"type", nil];
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_tex1NameTF.stringValue, @"attr", @"GPUImagePicture", @"type", nil];
+        [mArr addObject:dic];
+    }
+    if (![_tex2NameTF.stringValue isEqualToString:@""])
+    {
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_tex2NameTF.stringValue, @"attr", @"GPUImagePicture", @"type", nil];
+        [mArr addObject:dic];
+    }
+    if (![_tex3NameTF.stringValue isEqualToString:@""])
+    {
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_tex3NameTF.stringValue, @"attr", @"GPUImagePicture", @"type", nil];
         [mArr addObject:dic];
     }
     /*
@@ -167,7 +177,7 @@
 
     // Set up some variables for this specific template.
     NSDictionary *variables = [NSDictionary dictionaryWithObjectsAndKeys:
-                               mArr, @"Param",
+                               mArr, @"Textures",
                                (_shaderSelBtn.state == NSControlStateValueOn), @"ShaderEnabled",
                                _classNameTF.stringValue, @"ClassName",
                                //                               _urlTF.stringValue, @"Url",

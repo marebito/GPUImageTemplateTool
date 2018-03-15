@@ -85,20 +85,15 @@ gl_FragColor = vec4(specificColor, mag);
 );
 {% /if %}
 
-@implementation GPUImage{{ ClassName }}Filter
+@interface GPUImage{{ ClassName }}Filter ()
 {
-    {% for dude in guys %}
-    Current dude is {{ dude | uppercase }}...{% if dude equalsString "matt" %} AWESOME!{% /if %}
-    {% if currentLoop.currentIndex == 0 %}
-    (the best!) {% comment %} Should only happen for Matt {% /comment %}
-    {% for 1 to 5 %}*{% /for %}
-    {% /if %}
-    {% /for %}
-
     {% for texture in Textures %}
-        {{ p.type }} *_{{ p.attr }}; {% comment %} 第currentLoop.currentIndex层纹理 {% /comment %}
+    {{ texture.type }} *_{{ texture.attr }}PictureInput; // 第{{ currentLoop.currentIndex}}层纹理
     {% /for %}
 }
+@end
+
+@implementation GPUImage{{ ClassName }}Filter
 
 - (id)init{% for p in Param %}With{{ p.key | capitalized }}:({{ p.value }} *){{ p.key }} {% /for %}
 {
