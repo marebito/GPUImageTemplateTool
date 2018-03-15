@@ -15,29 +15,35 @@
 
 @interface ViewController ()
 {
-    NSString *templatePath_h;
-    NSString *templatePath_m;
+    NSString *templatePath_h; // 模板头文件
+    NSString *templatePath_m; // 模板实现文件
 }
-@property (weak) IBOutlet NSTextField *classNameTF;
-@property (weak) IBOutlet NSComboBox *superClassCB;
-@property (weak) IBOutlet NSView *canvasView;
-@property (weak) IBOutlet NSTextField *canvasWidthTF;
-@property (weak) IBOutlet NSTextField *canvasHeightTF;
-@property (weak) IBOutlet NSButton *tex1SelBtn;
-@property (weak) IBOutlet NSButton *tex2SelBtn;
-@property (weak) IBOutlet NSButton *tex3SelBtn;
-@property (weak) IBOutlet NSButton *videoSelBtn;
-@property (weak) IBOutlet NSButton *shaderSelBtn;
-@property (weak) IBOutlet NSPathControl *tex1PC;
-@property (weak) IBOutlet NSPathControl *tex2PC;
-@property (weak) IBOutlet NSPathControl *tex3PC;
-@property (weak) IBOutlet NSPathControl *mp4PC;
-@property (weak) IBOutlet NSTextField *tex1DurationTF;
-@property (weak) IBOutlet NSTextField *tex2DurationTF;
+@property (weak) IBOutlet NSTextField *classNameTF;    // 类名
+@property (weak) IBOutlet NSComboBox *superClassCB;    // 父类选择框
+@property (weak) IBOutlet NSView *canvasView;          // 画布设置视图
+@property (weak) IBOutlet NSTextField *canvasWidthTF;  // 画布宽输入框
+@property (weak) IBOutlet NSTextField *canvasHeightTF; // 画布高输入框
+@property (weak) IBOutlet NSButton *tex1SelBtn;        // 纹理1选择按钮
+@property (weak) IBOutlet NSButton *tex2SelBtn;        // 纹理2选择按钮
+@property (weak) IBOutlet NSButton *tex3SelBtn;        // 纹理3选择按钮
+@property (weak) IBOutlet NSButton *videoSelBtn;       // 视频选择按钮
+@property (weak) IBOutlet NSButton *shaderSelBtn;      // 是否自动产生shader
+@property (weak) IBOutlet NSPathControl *tex1PC;       // 纹理1路径显示
+@property (weak) IBOutlet NSPathControl *tex2PC;       // 纹理2路径显示
+@property (weak) IBOutlet NSPathControl *tex3PC;       // 纹理3路径显示
+@property (weak) IBOutlet NSTextField *tex1NameTF;     // 纹理1名称输入框
+@property (weak) IBOutlet NSTextField *tex2NameTF;     // 纹理2名称输入框
+@property (weak) IBOutlet NSTextField *tex3NameTF;     // 纹理3名称输入框
+@property (weak) IBOutlet NSPathControl *mp4PC;        // mp4路径
+@property (weak) IBOutlet NSTextField *tex1DurationTF; // 纹理1时长输入框
+@property (weak) IBOutlet NSTextField *tex2DurationTF; // 纹理2时长输入框
+@property (weak) IBOutlet NSTextField *tex3DurationTF; // 纹理3时长输入框
 @property (weak) IBOutlet NSTextField *tex1StartTF;
 @property (weak) IBOutlet NSTextField *tex2StartTF;
+@property (weak) IBOutlet NSTextField *tex3StartTF;
 @property (weak) IBOutlet NSTextField *tex1EndTF;
 @property (weak) IBOutlet NSTextField *tex2EndTF;
+@property (weak) IBOutlet NSTextField *tex3EndTF;
 @property (weak) IBOutlet NSView *videoSettingView;
 
 - (IBAction)generateAction:(id)sender;

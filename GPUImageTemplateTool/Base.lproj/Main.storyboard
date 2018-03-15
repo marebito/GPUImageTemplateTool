@@ -753,9 +753,9 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IpP-6a-8ya">
-                                <rect key="frame" x="18" y="283" width="31" height="17"/>
+                                <rect key="frame" x="18" y="283" width="36" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="纹理" id="KZu-e8-5f5">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="纹理1" id="KZu-e8-5f5">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -770,9 +770,9 @@
                                 </pathCell>
                             </pathControl>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zHR-bP-Cd2">
-                                <rect key="frame" x="18" y="221" width="31" height="17"/>
+                                <rect key="frame" x="18" y="221" width="39" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="纹理" id="JdD-w6-sYP">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="纹理2" id="JdD-w6-sYP">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1080,9 +1080,9 @@
                                 </comboBoxCell>
                             </comboBox>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOW-HL-KRE">
-                                <rect key="frame" x="19" y="162" width="31" height="17"/>
+                                <rect key="frame" x="19" y="162" width="39" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="纹理" id="aw2-FD-rru">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="纹理3" id="aw2-FD-rru">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1135,7 +1135,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csO-0U-XOQ">
-                                <rect key="frame" x="175" y="130" width="85" height="22"/>
+                                <rect key="frame" x="175" y="129" width="85" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="显示时长(3s)" drawsBackground="YES" id="HDS-LG-5ul">
                                     <font key="font" metaFont="system"/>
@@ -1171,7 +1171,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXX-RI-nmZ">
-                                <rect key="frame" x="402" y="130" width="58" height="22"/>
+                                <rect key="frame" x="402" y="129" width="58" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="结束(3s)" drawsBackground="YES" id="YZV-Lb-kOd">
                                     <font key="font" metaFont="system"/>
@@ -1520,6 +1520,15 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzf-97-a3c">
+                                <rect key="frame" x="63" y="129" width="78" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="88k-q7-gsK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -1532,16 +1541,22 @@
                         <outlet property="superClassCB" destination="dZQ-sO-uhC" id="wbL-BW-XK1"/>
                         <outlet property="tex1DurationTF" destination="vyh-Xl-rnT" id="rVe-jj-iDl"/>
                         <outlet property="tex1EndTF" destination="T8g-AP-Wu0" id="Ztc-iw-Er2"/>
+                        <outlet property="tex1NameTF" destination="i59-Ow-eWG" id="o0Q-9I-DGp"/>
                         <outlet property="tex1PC" destination="asw-rS-XIY" id="JL2-0X-UPe"/>
                         <outlet property="tex1SelBtn" destination="iSz-UC-KIA" id="TZi-Cm-fvQ"/>
                         <outlet property="tex1StartTF" destination="Wig-mc-P43" id="dAb-3e-e2e"/>
                         <outlet property="tex2DurationTF" destination="pns-sA-9ub" id="x8c-3G-s7q"/>
                         <outlet property="tex2EndTF" destination="V9B-jn-PLx" id="nZe-wg-fTg"/>
+                        <outlet property="tex2NameTF" destination="YkN-LQ-ceM" id="yKR-vb-wYp"/>
                         <outlet property="tex2PC" destination="ndf-m8-AaN" id="wFP-Jk-TiA"/>
                         <outlet property="tex2SelBtn" destination="9WO-fW-UMc" id="ljc-Tn-Ioh"/>
                         <outlet property="tex2StartTF" destination="SOK-Yk-sPk" id="RKQ-1A-F43"/>
+                        <outlet property="tex3DurationTF" destination="csO-0U-XOQ" id="sXR-j9-J6p"/>
+                        <outlet property="tex3EndTF" destination="BXX-RI-nmZ" id="HCt-8s-7gf"/>
+                        <outlet property="tex3NameTF" destination="gzf-97-a3c" id="f7L-Q8-EcD"/>
                         <outlet property="tex3PC" destination="6ah-Sq-QQ2" id="sOF-iN-3vj"/>
                         <outlet property="tex3SelBtn" destination="bnQ-7O-bre" id="hFd-nj-DN0"/>
+                        <outlet property="tex3StartTF" destination="0hf-XJ-FQD" id="aYR-Nd-J4l"/>
                         <outlet property="videoSelBtn" destination="syk-Bb-EZS" id="D5u-td-0qO"/>
                         <outlet property="videoSettingView" destination="UfH-WZ-1ih" id="Dqs-Th-nch"/>
                     </connections>

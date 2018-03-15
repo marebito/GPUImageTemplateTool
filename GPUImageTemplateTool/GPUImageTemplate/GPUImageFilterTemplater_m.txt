@@ -100,7 +100,6 @@ gl_FragColor = vec4(specificColor, mag);
     {% /for %}
 }
 
-
 - (id)init{% for p in Param %}With{{ p.key | capitalized }}:({{ p.value }} *){{ p.key }} {% /for %}
 {
     if (nil != (self = [super init]))
