@@ -7,9 +7,7 @@
 //
 
 #import "GPUImage{{ ClassName }}Filter.h"
-
 {% if PicTimeProcessed %}
-
 @implementation GPUImagePicture (ProcessTime)
 
 - (void)processImage:(CMTime)time;
@@ -84,30 +82,31 @@ gl_FragColor = vec4(specificColor, mag);
 }
 );
 {% /if %}
-
 @interface GPUImage{{ ClassName }}Filter ()
-{
-    {% for texture in Textures %}
-    {{ texture.type }} *_{{ texture.attr }}PictureInput; // 第{{ currentLoop.currentIndex}}层纹理
-    {% /for %}
+{   {% for texture in TextureAttributes %}{% if texture.type equalsString "GPUImagePicture" %}
+    {{ texture.type }} *_{{ texture.attr }}PictureInput; // 第{{ currentLoop.currentIndex }}层纹理{% else %}
+    {{ texture.type }}   *_{{ texture.attr }}MovieInput; // 视频输入{% /if %}{% /for %}
 }
 @end
 
 @implementation GPUImage{{ ClassName }}Filter
 
-- (id)init{% for p in Param %}With{{ p.key | capitalized }}:({{ p.value }} *){{ p.key }} {% /for %}
-{
-    if (nil != (self = [super init]))
-    {
-    {% for p in Param %}
-    _{{ p.key }} = {{ p.key }};
-    {% /for %}
+- (id)init
+{   {% if ShaderEnabled %}
+    if (nil != (self = [super initWithFragmentShaderFromString:kGPUImage{{ ClassName }}FragmentShaderString])){% else %}
+    if (nil != (self = [super init])){% /if %}
+    {   {% for texture in TextureAttributes %}{% if texture.type equalsString "GPUImagePicture" %}{% if !iOSPlatform %}
+        _{{ texture.attr }}PictureInput = [[GPUImagePicture alloc] initWithURL:[NSURL URLWithString:@"{{ texture.resource }}"]];{% else %}
+        _{{ texture.attr }}PictureInput = [[GPUImagePicture alloc] imageNamed:@"{{ texture.resource }}"];{% /if %}{% else %}{% if !iOSPlatform %}
+        _{{ texture.attr }}MovieInput = [[GPUImageMovie alloc] initWithURL:[NSURL URLWithString:@"{{ texture.resource }}"]];{% else %}
+        _{{ texture.attr }}PictureInput = [[GPUImageMovie alloc] initWithURL:[NSURL URLWithString:[[NSBundle mainBundle] pathForResource:[@"{{ texture.resource }}" stringByDeletingPathExtension] ofType:[@"{{ texture.resource }}" pathExtension]]]];{% /if %}{% /if %}{% /for %}
     }
     return self;
 }
 
 - (void)newFrameReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex
 {
+
     [super newFrameReadyAtTime:frameTime atIndex:textureIndex];
 }
 
@@ -129,6 +128,8 @@ gl_FragColor = vec4(specificColor, mag);
     {
         [outputFramebuffer lock];
     }
+
+
 
     [firstInputFramebuffer unlock];
 

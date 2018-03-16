@@ -26,6 +26,7 @@
 @property (weak) IBOutlet NSButton *tex1SelBtn;        // 纹理1选择按钮
 @property (weak) IBOutlet NSButton *tex2SelBtn;        // 纹理2选择按钮
 @property (weak) IBOutlet NSButton *tex3SelBtn;        // 纹理3选择按钮
+@property (weak) IBOutlet NSButton *platformSelBtn;       // 视频选择按钮
 @property (weak) IBOutlet NSButton *videoSelBtn;       // 视频选择按钮
 @property (weak) IBOutlet NSButton *shaderSelBtn;      // 是否自动产生shader
 @property (weak) IBOutlet NSPathControl *tex1PC;       // 纹理1路径显示
@@ -34,6 +35,7 @@
 @property (weak) IBOutlet NSTextField *tex1NameTF;     // 纹理1名称输入框
 @property (weak) IBOutlet NSTextField *tex2NameTF;     // 纹理2名称输入框
 @property (weak) IBOutlet NSTextField *tex3NameTF;     // 纹理3名称输入框
+@property (weak) IBOutlet NSTextField *videoInputTF;   // 纹理3名称输入框
 @property (weak) IBOutlet NSPathControl *mp4PC;        // mp4路径
 @property (weak) IBOutlet NSTextField *tex1DurationTF; // 纹理1时长输入框
 @property (weak) IBOutlet NSTextField *tex2DurationTF; // 纹理2时长输入框
@@ -132,56 +134,37 @@
     templatePath_h = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@Templater_h", _superClassCB.stringValue] ofType:@"txt"];
     templatePath_m = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@Templater_m", _superClassCB.stringValue] ofType:@"txt"];
 
-    NSMutableArray *mArr = [NSMutableArray new];
+    NSMutableArray *textureAttributes = [NSMutableArray new];
+    BOOL iosPlatform = (_platformSelBtn.state = NSControlStateValueOn);
+    BOOL enableFragmentShader = (_shaderSelBtn.state == NSControlStateValueOn);
+
     if (![_tex1NameTF.stringValue isEqualToString:@""])
     {
-        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_tex1NameTF.stringValue, @"attr", @"GPUImagePicture", @"type", nil];
-        [mArr addObject:dic];
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_tex1NameTF.stringValue, @"attr", @"GPUImagePicture", @"type", iosPlatform?[_tex1PC.stringValue lastPathComponent]: _tex1PC.stringValue, @"resource", nil];
+        [textureAttributes addObject:dic];
     }
     if (![_tex2NameTF.stringValue isEqualToString:@""])
     {
-        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_tex2NameTF.stringValue, @"attr", @"GPUImagePicture", @"type", nil];
-        [mArr addObject:dic];
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_tex2NameTF.stringValue, @"attr", @"GPUImagePicture", @"type",  iosPlatform?[_tex2PC.stringValue lastPathComponent]:_tex2PC.stringValue, @"resource", nil];
+        [textureAttributes addObject:dic];
     }
     if (![_tex3NameTF.stringValue isEqualToString:@""])
     {
-        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_tex3NameTF.stringValue, @"attr", @"GPUImagePicture", @"type", nil];
-        [mArr addObject:dic];
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_tex3NameTF.stringValue, @"attr", @"GPUImagePicture", @"type", iosPlatform? [_tex3PC.stringValue lastPathComponent]:_tex3PC.stringValue, @"resource", nil];
+        [textureAttributes addObject:dic];
     }
-    /*
-     if (![_param1TF.stringValue isEqualToString:@""]) {
-     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_param1TF.stringValue, @"key", @"NSString", @"value", nil];
-     [mArr addObject:dic];
-     }
-     if (![_param2TF.stringValue isEqualToString:@""]) {
-     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_param2TF.stringValue, @"key", @"NSString", @"value", nil];
-     [mArr addObject:dic];
-     }
-     if (![_param3TF.stringValue isEqualToString:@""]) {
-     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_param3TF.stringValue, @"key", @"NSString", @"value", nil];
-     [mArr addObject:dic];
-     }
-     if (![_param4TF.stringValue isEqualToString:@""]) {
-     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_param4TF.stringValue, @"key", @"NSString", @"value", nil];
-     [mArr addObject:dic];
-     }
-     if (![_param5TF.stringValue isEqualToString:@""]) {
-     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_param5TF.stringValue, @"key", @"NSString", @"value", nil];
-     [mArr addObject:dic];
-     }
-     if (![_param6TF.stringValue isEqualToString:@""]) {
-     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_param6TF.stringValue, @"key", @"NSString", @"value", nil];
-     [mArr addObject:dic];
-     }
-     */
-
+    if (![_videoInputTF.stringValue isEqualToString:@""])
+    {
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:_videoInputTF.stringValue, @"attr", @"GPUImageMovie", @"type", iosPlatform?[_mp4PC.stringValue lastPathComponent]:_mp4PC.stringValue, @"resource", nil];
+        [textureAttributes addObject:dic];
+    }
     // Set up some variables for this specific template.
     NSDictionary *variables = [NSDictionary dictionaryWithObjectsAndKeys:
-                               mArr, @"Textures",
-                               (_shaderSelBtn.state == NSControlStateValueOn), @"ShaderEnabled",
                                _classNameTF.stringValue, @"ClassName",
-                               //                               _urlTF.stringValue, @"Url",
                                _superClassCB.stringValue, @"SuperClassName",
+                               textureAttributes, @"TextureAttributes",
+                               enableFragmentShader, @"ShaderEnabled",
+                               iosPlatform, @"iOSPlatform",
                                nil];
 
     // Process the template and display the results.
@@ -310,7 +293,7 @@
 {
     btn.hidden = YES;
     pathCtl.hidden = NO;
-    pathCtl.URL = [NSURL URLWithString:filePath];
+    pathCtl.URL = [NSURL fileURLWithPath:filePath];
 }
 
 - (IBAction)selectVideo:(id)sender
