@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54461D19205F4C0B00C2835B /* TexturePopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 54461D18205F4C0B00C2835B /* TexturePopoverVC.m */; };
 		545B2B3F2058C5A3000D3F51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B3E2058C5A3000D3F51 /* AppDelegate.m */; };
 		545B2B422058C5A3000D3F51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545B2B412058C5A3000D3F51 /* ViewController.m */; };
 		545B2B442058C5A3000D3F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545B2B432058C5A3000D3F51 /* Assets.xcassets */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54461D17205F4C0B00C2835B /* TexturePopoverVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TexturePopoverVC.h; sourceTree = "<group>"; };
+		54461D18205F4C0B00C2835B /* TexturePopoverVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TexturePopoverVC.m; sourceTree = "<group>"; };
 		545B2B3A2058C5A3000D3F51 /* GPUImageTemplateTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImageTemplateTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545B2B3D2058C5A3000D3F51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		545B2B3E2058C5A3000D3F51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				545B2B3E2058C5A3000D3F51 /* AppDelegate.m */,
 				545B2B402058C5A3000D3F51 /* ViewController.h */,
 				545B2B412058C5A3000D3F51 /* ViewController.m */,
+				54461D17205F4C0B00C2835B /* TexturePopoverVC.h */,
+				54461D18205F4C0B00C2835B /* TexturePopoverVC.m */,
 				545B2B432058C5A3000D3F51 /* Assets.xcassets */,
 				545B2B452058C5A3000D3F51 /* Main.storyboard */,
 				545B2B482058C5A3000D3F51 /* Info.plist */,
@@ -230,6 +235,7 @@
 				545B2B6C2058CA9C000D3F51 /* MGTemplateStandardFilters.m in Sources */,
 				545B2B4A2058C5A3000D3F51 /* main.m in Sources */,
 				545B2B6B2058CA9C000D3F51 /* MGTemplateEngine.m in Sources */,
+				54461D19205F4C0B00C2835B /* TexturePopoverVC.m in Sources */,
 				545B2B6D2058CA9C000D3F51 /* MGTemplateStandardMarkers.m in Sources */,
 				545B2B6E2058CA9C000D3F51 /* NSArray_DeepMutableCopy.m in Sources */,
 				545B2B3F2058C5A3000D3F51 /* AppDelegate.m in Sources */,

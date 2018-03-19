@@ -9,11 +9,12 @@
 #import "ViewController.h"
 #import "MGTemplateEngine.h"
 #import "ICUTemplateMatcher.h"
+#import "TexturePopoverVC.h"
 
 #define WeakObj(o) try{}@finally{} __weak typeof(o) o##Weak = o;
 #define StrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
 
-@interface ViewController ()
+@interface ViewController () <NSPopoverDelegate>
 {
     NSString *templatePath_h; // 模板头文件
     NSString *templatePath_m; // 模板实现文件
@@ -48,6 +49,11 @@
 @property (weak) IBOutlet NSTextField *tex3EndTF;
 @property (weak) IBOutlet NSView *videoSettingView;
 
+@property (nonatomic, strong) TexturePopoverVC *popoverVC;  // 弹出窗口
+@property (nonatomic, strong) NSPopover *texturePopover;    // 纹理悬浮窗
+@property (strong) NSWindow *detachedWindow;                // 附加窗口
+@property (strong) NSPanel *detachedHUDWindow;              // 附加显示面板
+
 - (IBAction)generateAction:(id)sender;
 - (IBAction)normalizedValueChanged:(id)sender;
 - (IBAction)videoChecked:(id)sender;
@@ -61,11 +67,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    NSRect frame = self.popoverVC.view.bounds;
+    NSUInteger styleMask = NSWindowStyleMaskTitled + NSWindowStyleMaskClosable;
+    NSRect rect = [NSWindow contentRectForFrameRect:frame styleMask:styleMask];
+    _detachedWindow = [[NSWindow alloc] initWithContentRect:rect styleMask:styleMask backing:NSBackingStoreBuffered defer:YES];
+    self.detachedWindow.contentViewController = self.popoverVC;
+    self.detachedWindow.releasedWhenClosed = NO;
+
+    styleMask = NSWindowStyleMaskTitled + NSWindowStyleMaskClosable + NSWindowStyleMaskHUDWindow + NSWindowStyleMaskUtilityWindow;
+    _detachedHUDWindow = [[NSPanel alloc] initWithContentRect:rect styleMask:styleMask backing:NSBackingStoreBuffered defer:YES];
+    self.detachedHUDWindow.contentViewController = self.popoverVC;
+    self.detachedHUDWindow.releasedWhenClosed = NO;
 }
 
 - (void)setRepresentedObject:(id)representedObject
 {
     [super setRepresentedObject:representedObject];
+}
+
+- (NSPopover *)texturePopover
+{
+    if (!_texturePopover) {
+        _texturePopover = [[NSPopover alloc] init];
+        _popoverVC = [self.storyboard instantiateControllerWithIdentifier:@"TexturePopoverVC"];
+        _texturePopover.contentViewController = _popoverVC;
+        _texturePopover.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantLight];
+        _texturePopover.animates = YES;
+        _texturePopover.behavior = NSPopoverBehaviorTransient;
+        _texturePopover.delegate = self;
+    }
+    return _texturePopover;
 }
 
 - (void)check:(void (^)(BOOL isValid))callback
@@ -336,6 +368,120 @@
             }
         }
     } isPresent:NO];
+}
+- (IBAction)showPopoverAction:(id)sender
+{
+    [self showPopoverAction:sender popoverPosition:NSRectEdgeMaxX];
+}
+
+- (void)showPopoverAction:(id)sender popoverPosition:(NSRectEdge)prefEdge
+{
+    if (self.detachedWindow.visible == YES)
+    {
+        [self.detachedWindow close];
+    }
+
+    if (self.detachedHUDWindow.visible)
+    {
+        [self.detachedHUDWindow makeKeyAndOrderFront:self];
+        return;
+    }
+
+    [self.texturePopover showRelativeToRect:((NSControl *)sender).bounds ofView:sender preferredEdge:prefEdge];
+}
+
+#pragma mark -
+#pragma mark NSPopoverDelegate Methods
+// -------------------------------------------------------------------------------
+// Invoked on the delegate when the NSPopoverWillShowNotification notification is sent.
+// This method will also be invoked on the popover.
+// -------------------------------------------------------------------------------
+- (void)popoverWillShow:(NSNotification *)notification
+{
+    NSPopover *popover = notification.object;
+    if (popover != nil)
+    {
+        //... operate on that popover
+    }
+}
+
+// -------------------------------------------------------------------------------
+// Invoked on the delegate when the NSPopoverDidShowNotification notification is sent.
+// This method will also be invoked on the popover.
+// -------------------------------------------------------------------------------
+- (void)popoverDidShow:(NSNotification *)notification
+{
+    // add new code here after the popover has been shown
+}
+
+// -------------------------------------------------------------------------------
+// Invoked on the delegate when the NSPopoverWillCloseNotification notification is sent.
+// This method will also be invoked on the popover.
+// -------------------------------------------------------------------------------
+- (void)popoverWillClose:(NSNotification *)notification
+{
+    NSString *closeReason = [notification.userInfo valueForKey:NSPopoverCloseReasonKey];
+    if (closeReason)
+    {
+        // closeReason can be:
+        //      NSPopoverCloseReasonStandard
+        //      NSPopoverCloseReasonDetachToWindow
+        //
+        // add new code here if you want to respond "before" the popover closes
+        //
+    }
+}
+
+// -------------------------------------------------------------------------------
+// Invoked on the delegate when the NSPopoverDidCloseNotification notification is sent.
+// This method will also be invoked on the popover.
+// -------------------------------------------------------------------------------
+- (void)popoverDidClose:(NSNotification *)notification
+{
+    NSString *closeReason = [notification.userInfo valueForKey:NSPopoverCloseReasonKey];
+    if (closeReason)
+    {
+        // closeReason can be:
+        //      NSPopoverCloseReasonStandard
+        //      NSPopoverCloseReasonDetachToWindow
+        //
+        // add new code here if you want to respond "after" the popover closes
+        //
+    }
+
+    // release our popover since it closed
+    _texturePopover = nil;
+}
+
+// -------------------------------------------------------------------------------
+// Invoked on the delegate to give permission to detach popover as a separate window.
+// -------------------------------------------------------------------------------
+- (BOOL)popoverShouldDetach:(NSPopover *)popover
+{
+    return YES;
+}
+
+// -------------------------------------------------------------------------------
+// Invoked on the delegate to when the popover was detached.
+// Note: Invoked only if AppKit provides the window for this popover.
+// -------------------------------------------------------------------------------
+- (void)popoverDidDetach:(NSPopover *)popover
+{
+    NSLog(@"popoverDidDetach");
+}
+
+// -------------------------------------------------------------------------------
+// Invoked on the delegate asked for the detachable window for the popover.
+// -------------------------------------------------------------------------------
+- (NSWindow *)detachableWindowForPopover:(NSPopover *)popover
+{
+    return nil;
+}
+
+#pragma mark - NSApplicationDelegate Methods
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+{
+    return YES;
 }
 
 @end
